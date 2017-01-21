@@ -385,7 +385,7 @@ $(document).ready(function(){
 &lt;div style="width:500px;height:400px;"&gt;
   &lt;svg&gt;
     &lt;defs&gt;
-      &lt;linearGradient id=&quot;MyGradient&quot;&gt;
+      &lt;linearGradient id=&quot;myGradient&quot;&gt;
         &lt;stop offset=&quot;5%&quot; stop-color=&quot;#F60&quot; /&gt;
         &lt;stop offset=&quot;95%&quot; stop-color=&quot;#FF6&quot; /&gt;
       &lt;/linearGradient&gt;
@@ -428,13 +428,12 @@ $(document).ready(function(){
       <h1>SVG: Tools &amp; Libraries</h1>
       <ul>
         <li><a href="http://code.google.com/p/svgweb/">SVGweb</a>: cross-browser SVG polyfill</li>
-        <li><a href="http://raphaeljs.com/">RaphaëlJS</a>: cross-browser vector graphics JS library</li>
-        <li><a href="http://g.raphaeljs.com/">gRaphael</a>: SVG-based charting library</li>
+        <li><a href="http://dmitrybaranovskiy.github.io/raphael/">RaphaëlJS</a>: cross-browser vector graphics JS library</li>
         <li><a href="http://wijmo.com/widgets/wijmo-complete/scatter-chart/">WijMo</a>: UI widgets and charts</li>
       </ul>
       <div style="text-align:center;">
         Animated Chart Demo <br>
-      <a href="http://raphaeljs.com/chart.html" target="blank" class="btn">
+      <a href="http://dmitrybaranovskiy.github.io/raphael/chart.html" target="blank" class="btn">
         <img src="http://dl.dropbox.com/u/10998095/Screenshots/co8d2pcz7q1-.png">
       </a>
       </div>
@@ -505,6 +504,7 @@ context.stroke();
         <li>All the draw methods are executed here
           <pre class="code">var context = canvas.getContext("2d");</pre>
         </li>
+        <li>The getContext() method returns an object that provides methods and properties for drawing on the canvas.</li>
       </ul>
     </div>
 
@@ -523,6 +523,7 @@ context.stroke();
       </ul>
     </div>
 
+    <!-- Further reading: http://www.w3resource.com/html5-canvas/html5-canvas-path.php -->
     <div class="slide normal">
       <h1>Lines and Paths</h1>
       <ul>
@@ -538,6 +539,7 @@ context.stroke();
         <li>Adds a subpath along the circumference of the described circle, with the angles defined
           <pre class="code">arc(x, y, radius, startAngle, endAngle, counterclockwise);</pre>
         </li>
+	<li>A path consists of a list of zero or more subpaths. There are one or more points in each subpath that are connected by straight lines or curves.  By combining subpaths you can create any custom shape you can imagine.</li>
       </ul>
     </div>
 
@@ -635,20 +637,10 @@ setInterval(function() {
 
     <div class="slide normal">
       <h1>Canvas: Snake Demo</h1>
-      <a href="http://talks.zenorocha.com/2012/jsconf/demos/snake/snake.html" target="blank" class="btn">
+      <a href="http://bluelemoncode.com/Demo/BlueLemonCode_snakeGame.html" target="blank" class="btn">
         <img src="http://dl.dropbox.com/u/10998095/Screenshots/1~w1i3s_-hzf.png">
       </a>
     </div>
-
-    <div class="slide normal">
-      <h1>Canvas: Wormz Demo</h1>
-      <div style="text-align:center;">
-      <a href="http://html5-pro.com/" target="blank" class="btn">
-        <img src="http://dl.dropbox.com/u/10998095/Screenshots/yt01kc40jx9~.png">
-      </a>
-      </div>
-    </div>
-
 
     <div class="slide normal">
       <h1>drawImage</h1>
@@ -674,14 +666,6 @@ img.src = 'media/babyhippo.jpg';
 
 
       <p>See <a href="https://developer.mozilla.org/en-US/docs/HTML/Canvas/Tutorial/Using_images">MDN: Using Images</a></p>
-    </div>
-
-
-    <div class="slide normal">
-      <h1>MontageMaker Demo</h1>
-      <a href="http://montage-maker.appspot.com/">
-        <img src="http://dl.dropbox.com/u/10998095/Screenshots/95t264j73iso.png">
-      </a>
     </div>
 
 
@@ -714,7 +698,7 @@ img.src = 'media/babyhippo.jpg';
       <pre class="code">&lt;canvas id="myDrawing" width="500" height="500"&gt;</pre>
       <pre class="code">var canvas = document.getElementById("myDrawing"); 
 context = canvas.getContext("experimental-webgl");</pre>
-        <p>But most people use the <a href="http://mrdoob.github.com/three.js/">ThreeJS</a> library...</p>
+        <p>But most people use the <a href="https://threejs.org/">ThreeJS</a> library...</p>
 
       </ul>
     </div>
@@ -730,7 +714,6 @@ renderer.setSize(document.body.clientWidth,
       <p>Set some color</p>
       <pre class="code">renderer.setClearColorHex(0xFFFFFF, 1.0);
 renderer.clear();</pre>
-    <a href="http://talks.zenorocha.com/2012/jsconf/demos/three/three_1.html">Demo</a>
     </div>
 
     <div class="slide normal">
@@ -746,7 +729,6 @@ var cube =  new THREE.Mesh(new THREE.CubeGeometry(50,50,50),
 scene.add(cube);</pre>
       <p>And render the Scene from the Camera</p>
       <pre class="code">renderer.render(scene, camera);</pre>
-      <a href="http://talks.zenorocha.com/2012/jsconf/demos/three/three_2.html">Demo</a>
     </div>
 
     <div class="slide normal">
@@ -765,7 +747,6 @@ scene.add(cube);</pre>
 
 animate(new Date().getTime());
       </pre>
-      <a href="http://talks.zenorocha.com/2012/jsconf/demos/three/three_3.html">Demo</a>
 
     </div>
 

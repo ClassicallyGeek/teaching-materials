@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>   
+ <head>
+  <meta charset="utf-8">
+  <title>SVG's The One For Me!</title>
+  <link rel="stylesheet" type="text/css" href="exercise_svg_answer.css">
+  <script src="raphael-min.js"></script>
+  <script src="g.raphael.js"></script>
+  <script src="g.pie.js"></script>
+ </head>
+ <body>
+<!-- Step 1 -->
+<!--
+   <object type="image/svg+xml" style="border:none; width:550px; height:540px; background: white;" data="clip_art.svg"></object>
+
+   <img src="clip_art.svg">
+-->
+<!-- Step 2 -->
+<!-- check out https://www.tutorialspoint.com/svg/svg_ellipse.htm for help drawing a beret -->
+<svg height="200" width="600" xmlns=http://www.w3.org/2000/svg>  
+  <circle id="yellowcircle" cx="50" cy="50" r="50" fill="orange"/> <!-- Most of Face -->
+  <circle id="blueacircle" cx="30" cy="30" r="10" fill="blue"/> <!-- Left Eye -->
+  <circle id="greencircle" cx="70" cy="30" r="10" fill="green"/><!-- Right Eye -->
+  <ellipse id="blackellipse" cx="50" cy="75" rx="20" ry="8" fill="black"/> <!-- Mouth color -->
+  <ellipse id="yellowellipse" cx="50" cy="73" rx="20" ry="8" fill="yellow"/> <!-- to create thing lips should match face unless you want a mustache-->
+  <ellipse id="beretellipse" cx="50" cy="5" rx="50" ry="5" fill="red"/> <!--cx=50 puts it in the middle; cy- 5 down from the top; rx-50 50 wide; ry-5 -- 5 tall --> 
+</svg>
+<!-- Step 3 -->
+<div class="logo"></div>
+<!-- Step 4 -->
+<!-- Excellent Tutorial here: http://www.mattzeunert.com/2012/09/20/graphael-pie-chart-example.html -->
+<!-- gRaphael here: https://github.com/DmitryBaranovskiy/g.raphael --> 
+<div id="pie"></div>
+<script>
+ var paper = Raphael("pie");
+ paper.piechart(
+   100, // pie center x coordinate
+   100, // pie center y coordinate
+   90,  // pie radius
+    [50, 20, 10, 20] // values
+  );
+</script>
+</body>
+</html> 

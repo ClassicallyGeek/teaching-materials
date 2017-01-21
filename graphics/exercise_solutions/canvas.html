@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>   
+ <head>
+  <meta charset="utf-8">
+  <title>I'm a canvas badass!</title>
+ </head>
+ <body>
+<canvas id="myCanvas"></canvas>
+<script>
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+context.strokeStyle = '#000000';
+context.fillStyle = '#FFFF00';
+context.lineWidth = 4;
+context.beginPath();
+context.arc(100,75,50,0*Math.PI,2*Math.PI,true);
+context.closePath();
+context.stroke();
+context.fill();
+
+/* MOUTH */
+context.lineWidth = 2;
+context.beginPath();
+context.arc(100,100,20,1*Math.PI,0.01*Math.PI,false);
+context.stroke();
+
+/* RIGHT EYE */
+context.beginPath();
+context.arc(80,60,10,0*Math.PI,2*Math.PI,false);
+context.stroke();
+context.fillStyle = '#000';
+context.fill();
+
+/* LEFT EYE */
+context.beginPath();
+context.arc(120,60,10,0*Math.PI,2*Math.PI,false);
+context.stroke();
+context.fillStyle = '#000';
+context.fill();
+
+/* EYE LEFT BROW */
+context.lineWidth = 2;
+context.beginPath();
+context.moveTo(110,50);
+context.lineTo(140,30);
+context.stroke();
+
+/*EYE Left BROW */
+context.beginPath();
+context.moveTo(90,50);
+context.lineTo(70,30);
+context.stroke();
+
+
+</script>  
+ </body>
+</html> 
